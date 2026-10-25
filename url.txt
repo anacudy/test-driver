@@ -31,7 +31,7 @@ https://downloadmirror.intel.com/929468/gfx_win_101.7092.exe
 # 24.80.0
 https://downloadmirror.intel.com/929786/WiFi-24.80.0-Driver64-Win10-Win11.exe
   checksum=sha-512=14b12299d6df2acb499de1d44d9243bb2bc4c050c1876af5abfd06c0b64100c33e357c8c9b2d587dd0792229029cb75797dfd33ffb3eb09b506ad787a611bece
-  out=be_ax_wifi.exe
+  out=be_wifi.exe
 
 
 # BE/AX/AC9 BT
@@ -40,7 +40,7 @@ https://downloadmirror.intel.com/929786/WiFi-24.80.0-Driver64-Win10-Win11.exe
 # 24.80.0
 https://downloadmirror.intel.com/930964/BT-24.80.0-64UWD-Win10-Win11.exe
   checksum=sha-512=dd5335728d36d79c787c0592784e8c345f2c38d0ca245b5bcc50b1f99026e01b529b3921e20d7c26e16708354aa798839823dd591e86cf87a1803dc1a22e66c9
-  out=be_ax_bt.exe
+  out=be_bt.exe
 
 
 # AC 7265/3168/3165 WiFi

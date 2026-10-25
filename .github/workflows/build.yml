@@ -12,6 +12,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
+      - name: Prepare
+        run: |
+          dpkg -s msitools
+          sudo apt -qq update
+          sudo apt -qq install -y msitools
+
       - name: Download
         run: |
           mkdir driver
@@ -19,12 +25,10 @@ jobs:
 
       - name: Chipset
         run: |
-          7z x -t# chipset.exe -ochipset '*ChipsetInstaller.exe'
-          cd chipset
-          7z x -t# "$(ls | head -n 1)" -oinstaller '*.zip'
-          cd installer
-          unzip *.zip || [[ $? -eq 1 ]]
-          mv Drivers ../../driver/chipset
+          7z x -t# chipset.exe -ochipset *ChipsetInstaller.exe
+          7z x -t# "chipset/$(ls chipset | head -n 1)" -ochipset *.zip
+          unzip -d chipset chipset/*.zip || [[ $? -eq 1 ]]
+          mv chipset/Drivers driver/chipset
 
       - name: Graphics
         run: |
@@ -33,8 +37,14 @@ jobs:
           mv 7th-10th_gfx/Graphics driver/7th-10th_gfx
           mv 11th-14th_gfx/Graphics driver/11th-14th_gfx
 
-      - name: WiFi & BT
+      - name: Bluetooth
         run: |
+          7z x -t# ac_bt.exe -oac_bt *.msi
+          7z x -t# be_bt.exe -obe_bt *.msi
+          msiextract -C ac_bt ac_bt/*.msi
+          msiextract -C be_bt be_bt/*.msi
+          mv 'ac_bt/Program Files/Intel/Bluetooth/drivers' driver/ac_bt
+          mv 'be_bt/Program Files/Intel/Bluetooth/drivers' driver/be_bt
 
       - name: 7z
         run: 7z a -t7z -mx=9 -m0=lzma2 -md=256m -mfb=273 -ms=on driver.7z driver
