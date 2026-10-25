@@ -10,7 +10,7 @@ https://downloadmirror.intel.com/925343/SetupChipset.exe
 https://downloadmirror.intel.com/929187/gfx_win_101.2145.exe
 # https://www.intel.cn/content/www/cn/zh/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
   checksum=sha-512=d30369a17f66a787d477fe77787d934a1e74581f27cb19ba1608df22e76c8dce68b589db327456527ae9228d8788663ce005467df84c722c03f59a2e9297c2d5
-  out=7th-10th.exe
+  out=07th-10th.exe
 
 
 # 32.0.101.7092

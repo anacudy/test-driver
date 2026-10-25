@@ -31,9 +31,9 @@ jobs:
 
       - name: Graphics
         run: |
-          7z x 7th-10th.exe -o7th-10th
+          7z x 07th-10th.exe -o07th-10th
           7z x 11th-14th.exe -o11th-14th
-          mv 7th-10th/Graphics driver/gfx/7th-10th
+          mv 07th-10th/Graphics driver/gfx/07th-10th
           mv 11th-14th/Graphics driver/gfx/11th-14th
 
       - name: Wireless
