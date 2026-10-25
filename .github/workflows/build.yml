@@ -28,6 +28,7 @@ jobs:
 
           cd installer
           7z x *.zip
+          ls -lh
           mv Drivers ../../../driver/chipset
 
       - name: Graphics
