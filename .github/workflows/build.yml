@@ -12,18 +12,17 @@ jobs:
       - name: Download
         run: aria2c --input-file=url.txt --conf-path=aria2.conf
 
-      - name: Extract
+      - name: Chipset
         run: |
           cd download
           7z x -t# chipset.exe -ochipset '*ChipsetInstaller.exe'
 
           cd chipset
-          installer=$(ls | head -n 1)
-          7z x -t# "$installer" -oinstaller '*.zip'
+          7z x -t# "$(ls | head -n 1)" -oinstaller '*.zip'
 
           cd installer
           7z x *.zip
-          mv Drivers chipset
+          ls
 
       - name: Upload
         uses: actions/upload-artifact@v7
