@@ -27,8 +27,7 @@ jobs:
           7z x -t# "$(ls | head -n 1)" -oinstaller '*.zip'
 
           cd installer
-          7z x *.zip
-          ls -lh
+          unzip *.zip
           mv Drivers ../../../driver/chipset
 
       - name: Graphics
