@@ -16,11 +16,11 @@ jobs:
         run: |
           mkdir driver
           mkdir driver/gfx
-          sudo apt -qq update
-          sudo apt -qq install -y msitools
+          sudo apt-get -qq update
+          sudo apt-get -qq install -y msitools
 
       - name: Download
-        run: aria2c --input-file=url.txt --conf-path=aria2.conf
+        run: aria2c --quiet=true --input-file=url.txt --conf-path=aria2.conf
 
       - name: Chipset
         run: |
