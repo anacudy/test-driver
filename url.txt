@@ -29,9 +29,9 @@ https://downloadmirror.intel.com/929468/gfx_win_101.7092.exe
 # https://www.intel.cn/content/www/cn/zh/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html
 
 # 24.80.0
-https://downloadmirror.intel.com/929786/WiFi-24.80.0-Driver64-Win10-Win11.exe
-  checksum=sha-512=14b12299d6df2acb499de1d44d9243bb2bc4c050c1876af5abfd06c0b64100c33e357c8c9b2d587dd0792229029cb75797dfd33ffb3eb09b506ad787a611bece
-  out=be_wifi.exe
+http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/09/ee40f072-e25b-4b7a-a48e-667e643a192a_6f5d1a13179f11b7e8a5ea380e0880f198da2689.cab
+  checksum=sha-256=bf2c9210eda5e3defb7eaa491ecda52f8ad6e0d844f85850f898cfbd008ba3fd
+  out=be_wifi.cab
 
 
 # BE/AX/AC9 BT
@@ -41,15 +41,6 @@ https://downloadmirror.intel.com/929786/WiFi-24.80.0-Driver64-Win10-Win11.exe
 https://downloadmirror.intel.com/930964/BT-24.80.0-64UWD-Win10-Win11.exe
   checksum=sha-512=dd5335728d36d79c787c0592784e8c345f2c38d0ca245b5bcc50b1f99026e01b529b3921e20d7c26e16708354aa798839823dd591e86cf87a1803dc1a22e66c9
   out=be_bt.exe
-
-
-# AC 7265/3168/3165 WiFi
-# https://www.intel.cn/content/www/cn/zh/download/823059/intel-wireless-wi-fi-drivers-for-wireless-ac-7265-rev-d-3168-and-3165.html
-
-# 23.40.0
-https://downloadmirror.intel.com/823060/WiFi-23.40.0-Driver64-Win10-Win11.exe
-  checksum=sha-256=6D4C582FD4D94EBEA03F2B26DCE62A3860B061ED2C73E8D8B6982F8C57E89712
-  out=ac_wifi.exe
 
 
 # AC 7265/3168/3165 BT

@@ -14,13 +14,15 @@ jobs:
 
       - name: Prepare
         run: |
+          mkdir driver
+          mkdir driver/bt
+          mkdir driver/gfx
+          mkdir driver/wifi
           sudo apt -qq update
           sudo apt -qq install -y msitools
 
       - name: Download
-        run: |
-          mkdir driver
-          aria2c --input-file=url.txt --conf-path=aria2.conf
+        run: aria2c --input-file=url.txt --conf-path=aria2.conf
 
       - name: Chipset
         run: |
@@ -31,10 +33,15 @@ jobs:
 
       - name: Graphics
         run: |
-          7z x 7th-10th_gfx.exe -o7th-10th_gfx
-          7z x 11th-14th_gfx.exe -o11th-14th_gfx
-          mv 7th-10th_gfx/Graphics driver/7th-10th_gfx
-          mv 11th-14th_gfx/Graphics driver/11th-14th_gfx
+          7z x 7th-10th_gfx.exe -o7th-10th
+          7z x 11th-14th_gfx.exe -o11th-14th
+          mv 7th-10th/Graphics driver/gfx/7th-10th
+          mv 11th-14th/Graphics driver/gfx/11th-14th
+
+      - name: Wireless
+        run: |
+          7z x be_wifi.cab -owifi
+          mv wifi driver/wifi/be
 
       - name: Bluetooth
         run: |
@@ -42,8 +49,8 @@ jobs:
           7z x -t# be_bt.exe -obe_bt *.msi
           msiextract -C ac_bt ac_bt/*.msi
           msiextract -C be_bt be_bt/*.msi
-          mv 'ac_bt/Program Files/Intel/Bluetooth/drivers' driver/ac_bt
-          mv 'be_bt/Program Files/Intel/Bluetooth/drivers' driver/be_bt
+          mv 'ac_bt/Program Files/Intel/Bluetooth/drivers' driver/bt/ac
+          mv 'be_bt/Program Files/Intel/Bluetooth/drivers' driver/bt/be
 
       - name: Compress
         run: 7z a -t7z -mx=9 -m0=lzma2 -md=256m -mfb=273 -ms=on driver.7z driver
