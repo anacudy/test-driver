@@ -26,7 +26,7 @@ jobs:
       - name: Chipset
         run: |
           7z x -t# chipset.exe -ochipset *ChipsetInstaller.exe
-          7z x -t# "chipset/$(ls chipset | head -n 1)" -ochipset *.zip
+          7z x -t# chipset/$(ls chipset | head -n 1) -ochipset *.zip
           unzip -d chipset chipset/*.zip || [[ $? -eq 1 ]]
           mv chipset/Drivers driver/chipset
 
