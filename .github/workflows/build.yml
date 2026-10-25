@@ -38,7 +38,7 @@ jobs:
 
       - name: Wireless
         run: |
-          7z x be_wifi.cab -owifi
+          7z x wifi.cab -owifi
           mv wifi driver/wifi
 
       - name: Bluetooth
