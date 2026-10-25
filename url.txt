@@ -1,52 +1,34 @@
-# Chipset INF Utility
-# https://www.intel.cn/content/www/cn/zh/download/19347/chipset-inf-utility.html
 
 # 10.1.20658.8883
 https://downloadmirror.intel.com/925343/SetupChipset.exe
+# https://www.intel.cn/content/www/cn/zh/download/19347/chipset-inf-utility.html
   checksum=sha-256=F20B9F97E9A81E613D4D529AAD5D3948F5E449998CD118C6DEF4037CA6536446
   out=chipset.exe
 
 
-# 7th-10th Gen Processor Graphics
-# https://www.intel.cn/content/www/cn/zh/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
-
 # 31.0.101.2145
 https://downloadmirror.intel.com/929187/gfx_win_101.2145.exe
+# https://www.intel.cn/content/www/cn/zh/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
   checksum=sha-512=d30369a17f66a787d477fe77787d934a1e74581f27cb19ba1608df22e76c8dce68b589db327456527ae9228d8788663ce005467df84c722c03f59a2e9297c2d5
-  out=7th-10th_gfx.exe
+  out=7th-10th.exe
 
-
-# 11th-14th Gen Processor Graphics
-# https://www.intel.cn/content/www/cn/zh/download/864990/intel-11th-14th-gen-processor-graphics-windows.html
 
 # 32.0.101.7092
 https://downloadmirror.intel.com/929468/gfx_win_101.7092.exe
+# https://www.intel.cn/content/www/cn/zh/download/864990/intel-11th-14th-gen-processor-graphics-windows.html
   checksum=sha-512=35a863fc2ace37e267a1602eb992e54f909dbce6122b7224ad500301bbdb2389c38741800ffc4e389d91e1444bc96c2e26ee4283c97c4a7c7060064724385b9d
-  out=11th-14th_gfx.exe
+  out=11th-14th.exe
 
-
-# BE/AX/AC9 WiFi
-# https://www.intel.cn/content/www/cn/zh/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html
 
 # 24.80.0
 http://download.windowsupdate.com/d/msdownload/update/driver/drvs/2026/09/ee40f072-e25b-4b7a-a48e-667e643a192a_6f5d1a13179f11b7e8a5ea380e0880f198da2689.cab
+# https://www.intel.cn/content/www/cn/zh/download/19351/intel-wireless-wi-fi-drivers-for-windows-10-and-windows-11.html
   checksum=sha-256=bf2c9210eda5e3defb7eaa491ecda52f8ad6e0d844f85850f898cfbd008ba3fd
-  out=be_wifi.cab
+  out=wifi.cab
 
-
-# BE/AX/AC9 BT
-# https://www.intel.cn/content/www/cn/zh/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html
 
 # 24.80.0
 https://downloadmirror.intel.com/930964/BT-24.80.0-64UWD-Win10-Win11.exe
+# https://www.intel.cn/content/www/cn/zh/download/18649/intel-wireless-bluetooth-drivers-for-windows-10-and-windows-11.html
   checksum=sha-512=dd5335728d36d79c787c0592784e8c345f2c38d0ca245b5bcc50b1f99026e01b529b3921e20d7c26e16708354aa798839823dd591e86cf87a1803dc1a22e66c9
-  out=be_bt.exe
-
-
-# AC 7265/3168/3165 BT
-# https://www.intel.cn/content/www/cn/zh/download/823075/intel-wireless-bluetooth-drivers-for-wireless-ac-7265-rev-d-3168-and-3165.html
-
-# 23.40.0
-https://downloadmirror.intel.com/823076/BT-23.40.0-64UWD-Win10-Win11.exe
-  checksum=sha-256=748D8E7ED0A89BA842823449FBDBDCC00D46BBE45EEB84A93D229AEB6F3FCF3B
-  out=ac_bt.exe
+  out=bt.exe
