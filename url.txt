@@ -13,7 +13,7 @@ https://downloadmirror.intel.com/925343/SetupChipset.exe
 # 31.0.101.2145
 https://downloadmirror.intel.com/929187/gfx_win_101.2145.exe
   checksum=sha-512=d30369a17f66a787d477fe77787d934a1e74581f27cb19ba1608df22e76c8dce68b589db327456527ae9228d8788663ce005467df84c722c03f59a2e9297c2d5
-  out=7-10_gfx.exe
+  out=7th-10th_gfx.exe
 
 
 # 11th-14th Gen Processor Graphics
@@ -22,7 +22,7 @@ https://downloadmirror.intel.com/929187/gfx_win_101.2145.exe
 # 32.0.101.7092
 https://downloadmirror.intel.com/929468/gfx_win_101.7092.exe
   checksum=sha-512=35a863fc2ace37e267a1602eb992e54f909dbce6122b7224ad500301bbdb2389c38741800ffc4e389d91e1444bc96c2e26ee4283c97c4a7c7060064724385b9d
-  out=11-14_gfx.exe
+  out=11th-14th_gfx.exe
 
 
 # BE/AX/AC9 WiFi

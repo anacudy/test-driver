@@ -5,12 +5,18 @@ jobs:
   build:
     runs-on: ubuntu-26.04
 
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout
         uses: actions/checkout@v7
 
       - name: Download
         run: aria2c --input-file=url.txt --conf-path=aria2.conf
+
+      - name: Mkdir
+        run: mkdir driver
 
       - name: Chipset
         run: |
@@ -22,10 +28,24 @@ jobs:
 
           cd installer
           7z x *.zip
-          ls
+          mv Drivers ../../../driver/chipset
 
-      - name: Upload
-        uses: actions/upload-artifact@v7
+      - name: Graphics
+        run: |
+          cd download
+          7z x 7th-10th_gfx.exe -o7th-10th_gfx
+          7z x 11th-14th_gfx.exe -o11th-14th_gfx
+
+          mv 7th-10th_gfx/Graphics ../driver/7th-10th_gfx
+          mv 11th-14th_gfx/Graphics ../driver/11th-14th_gfx
+
+      - name: 7z
+        run: 7z a -t7z -mx=9 -m0=lzma2 -md=256m -mfb=273 -ms=on driver.7z driver
+
+      - name: Release
+        uses: softprops/action-gh-release@v3
         with:
-          path: download/chipset/installer/chipset
-          compression-level: 9
+          tag_name: latest
+          files: driver.7z
+          overwrite_files: true
+          fail_on_unmatched_files: true
